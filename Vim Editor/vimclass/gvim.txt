@@ -25,21 +25,15 @@ Mississippi, Jackson
 Missouri, Jefferson City
 Montana, Helena
 Nebraska, Lincoln
-Nevada, Carson City
-New Hampshire, Concord
-New Jersey, Trenton
-New Mexico, Santa Fe
-New York, Albany
-North Carolina, Raleigh
+Nevada, 
+New Concord
+New Trenton
 North Dakota, Bismarck
+O
 Ohio, Columbus
-Oklahoma, Oklahoma City
-Oregon, Salem
-Pennsylvania, Harrisburg
-Rhode Island, Providence
-South Carolina, Columbia
-South Dakota, Pierre
-Tennessee, Nashville
+
+
+
 Texas, Austin
 Utah, Salt Lake City
 Vermont, Montpelier
