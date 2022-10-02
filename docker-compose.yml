@@ -1,33 +1,33 @@
 version: "3.9"
 
 services:
-  app:
-    depends_on:
-      - db
-    build:
-      context: .
-      args:
-        - DEV=true
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./app:/app
-    command: >
-        sh -c "python manage.py runserver 0.0.0.0:8000"
-    environment:
-      - DB_HOST=db
-      - DB_NAME=devdb
-      - DB_USER=maito
-      - DB_PASS=changeme
+  # app:
+  #   depends_on:
+  #     - db
+  #   build:
+  #     context: .
+  #     args:
+  #       - DEV=true
+  #   ports:
+  #     - "8000:8000"
+  #   volumes:
+  #     - ./app:/app
+  #   command: >
+  #       sh -c "python manage.py runserver 0.0.0.0:8000"
+  #   environment:
+  #     - DB_HOST=db
+  #     - DB_NAME=maito_db
+  #     - DB_USER=maito
+  #     - DB_PASS=changeme
 
   db:
     image: postgres:13-alpine
-    volumes:
-      - dev-db-data:/var/lib/postgresql/data
+    # volumes:
+    #   - dev-db-data:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=devdb
+      - POSTGRES_DB=maito_db
       - POSTGRES_USER=maito
       - POSTGRES_PASSWORD=changeme
 
-volumes:
-  dev-db-data: 
+# volumes:
+#   dev-db-data: 
