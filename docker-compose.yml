@@ -22,6 +22,19 @@ services:
       - DB_USER=maito
       - DB_PASS=maitocode
 
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    restart: unless-stopped
+
   db:
     image: postgres:13-alpine
     volumes:
@@ -30,5 +43,7 @@ services:
       - POSTGRES_DB=maito_db
       - POSTGRES_USER=maito
       - POSTGRES_PASSWORD=maitocode
+
 volumes:
   maito-db-data:
+  pgadmin:
