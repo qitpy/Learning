@@ -12,6 +12,7 @@ services:
       - '8000:8000'
     volumes:
       - ./app:/app
+      - dev-static-data:/vol/web
     command: >
       sh -c "python manage.py wait_for_db &&
              python manage.py migrate &&
@@ -47,3 +48,4 @@ services:
 volumes:
   maito-db-data:
   pgadmin:
+  dev-static-data:
