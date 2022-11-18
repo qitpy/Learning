@@ -1,0 +1,46 @@
+Alabama, Montgomery
+Alaska, Juneau
+Arizona, Phoenix
+Arkansas, Littlerock
+California, Sacramento
+Colorado, Denver
+Connecticut, Hartford
+Delaware, Dover
+Florida, Tallahassee
+Georgia, Atlanta
+Hawaii, Honolulu
+Idaho, Boise
+Illinois, Springfield
+Indiana, Indianapolis
+Iowa, Des Moines
+Kansas, Topeka
+Kentucky, Frankfort
+Louisiana, Baton Rouge
+Maine, Augusta
+Maryland, Annapolis
+Massachusetts, Boston
+Michigan, Lansing
+Minnesota, St. Paul
+Mississippi, Jackson
+Missouri, Jefferson City
+Montana, Helena
+Nebraska, Lincoln
+Nevada, 
+New Concord
+New Trenton
+North Dakota, Bismarck
+O
+Ohio, Columbus
+
+
+
+Texas, Austin
+Utah, Salt Lake City
+Vermont, Montpelier
+Virginia, Richmond
+Washington, Olympia
+West Virginia, Charleston
+Wisconsin, Madison
+Wyoming, Cheyenne
+
+><
