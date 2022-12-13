@@ -1,0 +1,13 @@
+setup.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
+qmait_scrap/__init__.py
+qmait_scrap/items.py
+qmait_scrap/middlewares.py
+qmait_scrap/pipelines.py
+qmait_scrap/settings.py
+qmait_scrap/spiders/__init__.py
+qmait_scrap/spiders/myspider.py
