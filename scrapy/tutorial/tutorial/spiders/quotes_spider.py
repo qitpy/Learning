@@ -4,17 +4,22 @@ import scrapy
 class QuotesSpider(scrapy.Spider):
     name = "quotes"
     start_urls = [
-        'https://quotes.toscrape.com/page/1/'
+        'https://quotes.toscrape.com/'
     ]
 
     def parse(self, response):
-        for quote in response.css('.quote'):
-            yield {
-                'text': quote.css('span.text::text').get(),
-                'author': quote.css('.author::text').get(),
-                'tags': quote.css('.tag::text').getall()
-            }
+        author_page_links = response.css('.author + a')
+        yield from response.follow_all(author_page_links, self.parse_author)
 
-        next_page = response.css('li.next a::attr(href)').get()
-        if next_page is not None:
-            yield response.follow(next_page, self.parse)
+        pagination_links = response.css('li.next a')
+        yield from response.follow_all(pagination_links, self.parse)
+
+    def parse_author(self, response):
+        def extract_with_css(query):
+            return response.css(query).get(default='').strip()
+
+        yield {
+            'name': extract_with_css('h3.author-title::text'),
+            'birthdate': extract_with_css('.author-born-date::text'),
+            'bio': extract_with_css('.author-description::text'),
+        }
